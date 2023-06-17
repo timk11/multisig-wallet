@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "multisig_wallet_backend": {
+      "candid": "src/multisig_wallet_backend/multisig_wallet_backend.did",
+      "package": "multisig_wallet_backend",
+      "type": "rust"
+    },
+    "multisig_wallet_frontend": {
+      "dependencies": [
+        "multisig_wallet_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/multisig_wallet_frontend/src/index.html"
+      },
+      "source": [
+        "src/multisig_wallet_frontend/assets",
+        "dist/multisig_wallet_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
