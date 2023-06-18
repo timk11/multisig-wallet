@@ -1,9 +1,16 @@
 {
   "canisters": {
-    "multisig_wallet_backend": {
-      "candid": "src/multisig_wallet_backend/multisig_wallet_backend.did",
-      "package": "multisig_wallet_backend",
+    "ic_web3_copy": {
+      "candid": "src/ic_web3_copy/ic_web3_copy.did",
+      "package": "ic_web3_copy",
       "type": "rust"
+    },
+    "multisig_wallet_backend": {
+      "main": "src/multisig_wallet_backend/main.mo",
+      "type": "motoko",
+      "dependencies": [
+        "ic_web3_copy"
+      ]
     },
     "multisig_wallet_frontend": {
       "dependencies": [
