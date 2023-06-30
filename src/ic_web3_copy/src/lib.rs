@@ -19,8 +19,8 @@ use ic_web3::{
 //const URL: &str = "https://ethereum.publicnode.com";
 const URL: &str = "https://eth-goerli.g.alchemy.com/v2/0QCHDmgIEFRV48r1U1QbtOyFInib3ZAm";
 const CHAIN_ID: u64 = 5;
-const KEY_NAME: &str = "dfx_test_key"; // to deploy locally
-//const KEY_NAME: &str = "test_key_1"; // master test key ID for mainnet
+//const KEY_NAME: &str = "dfx_test_key"; // to deploy locally
+const KEY_NAME: &str = "test_key_1"; // master test key ID for mainnet
 //const KEY_NAME: &str = "key_1"; // master production key ID for mainnet
 const TOKEN_ABI: &[u8] = include_bytes!("contract/res/token.json");
 
