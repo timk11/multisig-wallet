@@ -1,5 +1,7 @@
 # multisig_wallet
 
+**(Addendum - 30-6-2023 - An example of this deployed to the IC can be seen at https://bit.ly/ic_multisig)**
+
 This is a multi-signature wallet designed for use with an EVM-based blockchain and built as part of the Internet Computer BUIDL Bitcoin Hackathon powered by Encode held in June 2023.
 
 This project makes use of the **ic-web3** library developed by Rocklabs, available at https://github.com/rocklabs-io/ic-web3. The wallet uses two canisters, a Rust canister modified slight ly from https://github.com/rocklabs-io/ic-web3/blob/main/examples/example.rs, and a Motoko canister which provides functions for operating the multisig wallet. The Motoko canister is loosely based on the "Multi Sig Wallet" Solidity tutorial on https://www.smartcontract.engineer, which I converted from the original Solidity into Motoko.
@@ -22,6 +24,6 @@ The following list of functions is able to be called. I've indicated the meaning
 - call_get_tx_count: (text) → Wallet address
 - call_token_balance: (text, text) → Wallet address; Token address
 - execute: (nat) → TxId of transaction to execute
-- init: (nat) → TxId of transaction to initiate (after all owners are addedd)
+- init: (nat) → number of owners needed to approve a transaction (after all owners are added; shows transaction TxId)
 - revoke: (nat) → TxId of transaction to revoke
 - submit: (text, nat64) → Recipient wallet; amount of ETH to send
