@@ -1,15 +1,15 @@
 # multisig_wallet
 
 **(Addenda:**
-- **30-6-2023 - An example of this deployed to the IC can be seen at https://bit.ly/ic_multisig**
+- **30-6-2023 - An example of this deployed to the IC can be seen at https://bit.ly/ic_multisig.**
 - **1-7-2023 - A further example of the same deployed instance can be seen at https://vvy6jx.csb.app/, using a template developed by @krpeacock.)**
 
 
 This is a multi-signature wallet designed for use with an EVM-based blockchain and built as part of the Internet Computer BUIDL Bitcoin Hackathon powered by Encode held in June 2023.
 
-This project makes use of the **ic-web3** library developed by Rocklabs, available at https://github.com/rocklabs-io/ic-web3. The wallet uses two canisters, a Rust canister modified slight ly from https://github.com/rocklabs-io/ic-web3/blob/main/examples/example.rs, and a Motoko canister which provides functions for operating the multisig wallet. The Motoko canister is loosely based on the "Multi Sig Wallet" Solidity tutorial on https://www.smartcontract.engineer, which I converted from the original Solidity into Motoko.
+This project makes use of the **ic-web3** library developed by Rocklabs, available at https://github.com/rocklabs-io/ic-web3. The wallet uses two canisters, a Rust canister modified slightly from https://github.com/rocklabs-io/ic-web3/blob/main/examples/example.rs, and a Motoko canister which provides functions for operating the multisig wallet. The Motoko canister is loosely based on the "Multi Sig Wallet" Solidity tutorial on https://www.smartcontract.engineer, which I converted from the original Solidity into Motoko.
 
-As written, the wallet canister operates on the Goerli testnet. Note that in its current form the wallet is **not secure** as the private key can be easily replicated. This should be thought of as a work in progress, shared for demostation purposes.
+As written, the wallet canister operates on the Goerli testnet. Note that in its current form the wallet might not be secure and may still contain bugs. This should be thought of as a work in progress, shared for demonstration purposes.
 
 For users new to the Internet Computer, a short tutorial on installing the necessary pre-requisites and deploying a canister (which is roughly equivalent to a smart contract on other blockchains) can be found at https://internetcomputer.org/docs/current/tutorials/deploy_sample_app.
 
