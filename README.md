@@ -1,6 +1,9 @@
 # multisig_wallet
 
-**(Addendum - 30-6-2023 - An example of this deployed to the IC can be seen at https://bit.ly/ic_multisig)**
+**(Addenda:**
+- **30-6-2023 - An example of this deployed to the IC can be seen at https://bit.ly/ic_multisig**
+- **1-7-2023 - A further example of the same deployed instance can be seen at https://vvy6jx.csb.app/, using a template developed by @krpeacock.)**
+
 
 This is a multi-signature wallet designed for use with an EVM-based blockchain and built as part of the Internet Computer BUIDL Bitcoin Hackathon powered by Encode held in June 2023.
 
