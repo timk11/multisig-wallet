@@ -102,12 +102,6 @@ shared(msg) actor class MultiSigWallet() {
 	  owners.add(new_owner);
   };
   
-  /*
-  public query func list_owners() : async Text { // wish list function; version here did not compile
-    return (Buffer.toText(owners, Text));
-  };
-  */
-  
   // initialization function
   public shared(msg) func init(_required : Nat) : async () {
     assert (not initiated); // "Already initiated"
