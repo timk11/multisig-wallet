@@ -42,7 +42,7 @@ shared(msg) actor class MultiSigWallet() {
   let approvals = Buffer.Buffer<Nat>(3); // mapping from tx id => number of approvals
   var initiated : Bool = false;
 
-  public shared(msg) query func whoami(): async Text {
+  public shared(msg) func whoami(): async Text {
     return Principal.toText(msg.caller);
   };
   
