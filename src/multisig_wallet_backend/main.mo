@@ -130,7 +130,7 @@ shared(msg) actor class MultiSigWallet() {
     let _executed = _transaction.executed;
     assert (not _executed); // "Transaction already executed"
     let approvalArray = approved.get(TxId);
-    assert (Buffer.contains<Text>(approvalArray, Principal.toText(msg.caller), Text.equal)); // "Transaction already approved by you"
+    assert (not Buffer.contains<Text>(approvalArray, Principal.toText(msg.caller), Text.equal)); // "Transaction already approved by you"
     let thisEntry = approved.get(TxId);
     thisEntry.add(Principal.toText(msg.caller));
     approved.put(TxId, thisEntry);
@@ -161,7 +161,7 @@ shared(msg) actor class MultiSigWallet() {
     let _executed = _transaction.executed;
     assert (not _executed); // "Transaction already executed"
     let approvalArray = approved.get(TxId);
-    assert(not Buffer.contains<Text>(approvalArray, Principal.toText(msg.caller), Text.equal)); // "Not already approved by you"
+    assert(Buffer.contains<Text>(approvalArray, Principal.toText(msg.caller), Text.equal)); // "Not already approved by you"
     let thisEntry = approved.get(TxId);
 	  let _ix = Buffer.indexOf<Text>(Principal.toText(msg.caller), thisEntry, Text.equal);
 	  let ix : Nat = switch _ix {
