@@ -42,6 +42,10 @@ shared(msg) actor class MultiSigWallet() {
   let approvals = Buffer.Buffer<Nat>(3); // mapping from tx id => number of approvals
   var initiated : Bool = false;
 
+  public shared({ caller }) func whoami(): async Text {
+    return Principal.toText(caller);
+  };
+  
   public func call_batch_request() : async Result {
     let result = await ic_web3.batch_request();
     return result;
@@ -94,8 +98,8 @@ shared(msg) actor class MultiSigWallet() {
 
   public shared(msg) func add_owner(new_owner : Text) : async () {
     assert (msg.caller == canister_owner); // "Only the canister owner can add a wallet owner"
-	assert (not Buffer.contains(owners, new_owner, Text.equal)); // "Already an owner"
-	owners.add(new_owner);
+	  assert (not Buffer.contains(owners, new_owner, Text.equal)); // "Already an owner"
+	  owners.add(new_owner);
   };
   
   /*
@@ -107,7 +111,7 @@ shared(msg) actor class MultiSigWallet() {
   // initialization function
   public shared(msg) func init(_required : Nat) : async () {
     assert (not initiated); // "Already initiated"
-	assert (msg.caller == canister_owner); // "Only the canister owner can initiate"
+	  assert (msg.caller == canister_owner); // "Only the canister owner can initiate"
     assert (owners.size() > 0); // "Owners required"
     assert ((_required > 0) and (_required <= owners.size())); // "Invalid required number of owners"
     required := _required;
