@@ -28,5 +28,5 @@ The following list of functions is able to be called. I've indicated the meaning
 
 An example of this wallet deployed to the Internet Computer can be seen at https://bit.ly/ic_multisig.
 
-A further example of the same deployed instance can be seen at https://vvy6jx.csb.app/, using a template developed by @krpeacock. This is a working example, allowing users to log in with an (IC) Internet Identity.
+A further example of the same deployed instance can be seen at https://vvy6jx.csb.app/, using a template developed by @krpeacock. This is a working example, allowing users to log in with an [Internet Identity](https://identity.ic0.app/).
 
